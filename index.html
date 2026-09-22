@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Szafixon — nowoczesna społeczność modowa: inspiracje, outfity i przydatne narzędzia.">
+  <title>Szafixon — moda bez zgadywania</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="logo" href="#home"><span>S</span> Szafixon</a>
+    <nav>
+      <a href="#finds">Findy</a><a href="#outfits">Outfity</a><a href="#tools">Narzędzia</a>
+      <a href="#how">Jak to działa</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-btn" href="#finds">Odkrywaj <span>↗</span></a>
+    <button class="menu" aria-label="Otwórz menu">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="pill"><i></i> Nowe inspiracje każdego dnia</div>
+      <h1>Twój styl.<br><em>Twoja szafa.</em></h1>
+      <p>Szafixon zbiera inspiracje, outfity i praktyczne narzędzia w jednym miejscu. Znajdź pomysł na stylizację i zbuduj własny look.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#finds">Przeglądaj findy <span>→</span></a>
+        <a class="btn ghost" href="#outfits">Zobacz outfity</a>
+      </div>
+      <div class="hero-grid">
+        <div class="stat"><strong>2.4k+</strong><span>inspiracji</span></div>
+        <div class="stat"><strong>850+</strong><span>stylizacji</span></div>
+        <div class="stat"><strong>100%</strong><span>za darmo</span></div>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <div class="eyebrow">NASZE NARZĘDZIA</div>
+      <div class="section-head"><h2>Everything you need to<br><em>build your style.</em></h2><p>Proste, szybkie i darmowe narzędzia do organizowania inspiracji.</p></div>
+      <div class="tools-grid">
+        <article class="tool"><div class="icon">↗</div><h3>Link Saver</h3><p>Zapisz link do ciekawego produktu lub inspiracji w jednym miejscu.</p><button onclick="saveDemo()">Zapisz link <span>→</span></button></article>
+        <article class="tool"><div class="icon">◷</div><h3>Outfit Planner</h3><p>Łącz elementy garderoby i twórz własne zestawy na każdą okazję.</p><button onclick="scrollToId('outfits')">Otwórz planer <span>→</span></button></article>
+        <article class="tool"><div class="icon">◇</div><h3>Style Finder</h3><p>Filtruj inspiracje po klimacie, kolorze i rodzaju stylizacji.</p><button onclick="filterFinds()">Znajdź styl <span>→</span></button></article>
+        <article class="tool"><div class="icon">♡</div><h3>Favorites</h3><p>Dodawaj ulubione inspiracje i wracaj do nich, kiedy chcesz.</p><button onclick="showToast('Dodaj coś do ulubionych!')">Moje ulubione <span>→</span></button></article>
+      </div>
+    </section>
+
+    <section id="finds" class="section">
+      <div class="section-head row"><div><div class="eyebrow">NAJNOWSZE</div><h2>Najnowsze <em>findsy.</em></h2></div><div class="filters"><button class="active" data-filter="all">Wszystko</button><button data-filter="street">Street</button><button data-filter="minimal">Minimal</button><button data-filter="sport">Sport</button></div></div>
+      <div class="find-grid">
+        <article class="card find" data-cat="street"><div class="visual v1"><span>STREET / 01</span></div><div class="card-body"><div><h3>Everyday Layers</h3><p>Warstwowy look na co dzień</p></div><button class="heart">♡</button></div></article>
+        <article class="card find" data-cat="minimal"><div class="visual v2"><span>MINIMAL / 02</span></div><div class="card-body"><div><h3>Clean Essentials</h3><p>Prosto, neutralnie, ponadczasowo</p></div><button class="heart">♡</button></div></article>
+        <article class="card find" data-cat="sport"><div class="visual v3"><span>SPORT / 03</span></div><div class="card-body"><div><h3>Daily Motion</h3><p>Sportowy komfort na co dzień</p></div><button class="heart">♡</button></div></article>
+        <article class="card find" data-cat="street"><div class="visual v4"><span>STREET / 04</span></div><div class="card-body"><div><h3>Night City</h3><p>Ciemna paleta i mocne detale</p></div><button class="heart">♡</button></div></article>
+      </div>
+    </section>
+
+    <section id="outfits" class="section dark-section">
+      <div class="eyebrow">INSPIRACJE</div><div class="section-head"><h2>Outfity, które<br><em>łączą się razem.</em></h2><p>Zobacz gotowe zestawy i wykorzystaj je jako punkt wyjścia do własnego stylu.</p></div>
+      <div class="outfit-grid">
+        <article class="outfit"><div class="outfit-art oa1"></div><div><span>01 / CASUAL</span><h3>Monochrome Daily</h3><p>4 elementy · neutralna paleta</p></div></article>
+        <article class="outfit"><div class="outfit-art oa2"></div><div><span>02 / STREET</span><h3>Urban Layers</h3><p>5 elementów · miejski charakter</p></div></article>
+        <article class="outfit"><div class="outfit-art oa3"></div><div><span>03 / SPORT</span><h3>Off-Duty</h3><p>4 elementy · wygoda przede wszystkim</p></div></article>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="eyebrow">NASZ PROCES</div><div class="section-head"><h2>Od inspiracji do<br><em>gotowego looku.</em></h2><p>Trzy proste kroki, które pomagają ogarnąć garderobę bez chaosu.</p></div>
+      <div class="steps">
+        <article><b>01</b><h3>Znajdź inspirację</h3><p>Przeglądaj nasze findsy i wybierz styl, który pasuje do Ciebie.</p><ul><li>Curated picks</li><li>Filtry stylu</li><li>Nowe inspiracje</li></ul></article>
+        <article><b>02</b><h3>Zbuduj outfit</h3><p>Połącz rzeczy, kolory i dodatki w spójną stylizację.</p><ul><li>Outfit Planner</li><li>Kolorystyczne zestawy</li><li>Lista ulubionych</li></ul></article>
+        <article><b>03</b><h3>Zapisz i wróć</h3><p>Zachowaj najlepsze pomysły, aby mieć je pod ręką później.</p><ul><li>Szybkie zapisy</li><li>Organizacja inspiracji</li><li>Twoja kolekcja</li></ul></article>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <div class="eyebrow">FAQ</div><div class="section-head"><h2>Najczęstsze<br><em>pytania.</em></h2></div>
+      <div class="faq">
+        <details><summary>Co to jest Szafixon?<span>+</span></summary><p>Szafixon to niezależna strona z inspiracjami modowymi, stylizacjami i prostymi narzędziami do organizowania pomysłów na outfity.</p></details>
+        <details><summary>Czy korzystanie jest darmowe?<span>+</span></summary><p>Tak. Podstawowe funkcje prezentowane na tej stronie są bezpłatne.</p></details>
+        <details><summary>Czy mogę dodać własną inspirację?<span>+</span></summary><p>W tej wersji demo możesz korzystać z przykładowej zawartości. Formularz przesyłania można łatwo podłączyć do bazy danych.</p></details>
+        <details><summary>Czy strona działa na telefonie?<span>+</span></summary><p>Tak — układ jest responsywny i został przygotowany także pod małe ekrany.</p></details>
+      </div>
+    </section>
+
+    <section class="cta"><div class="pill">SZAFIXON / 2026</div><h2>Gotowy, żeby<br><em>ogarnąć swój styl?</em></h2><p>Inspiracje, outfity i narzędzia — wszystko w jednym miejscu.</p><a class="btn primary" href="#finds">Zacznij odkrywać <span>→</span></a></section>
+  </main>
+
+  <footer><div class="logo"><span>S</span> Szafixon</div><p>Moda bez zgadywania — inspiracje, outfity i narzędzia.</p><div class="footer-links"><a href="#finds">Findy</a><a href="#outfits">Outfity</a><a href="#tools">Narzędzia</a><a href="#faq">FAQ</a></div><small>© 2026 Szafixon. Projekt demonstracyjny.</small></footer>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
